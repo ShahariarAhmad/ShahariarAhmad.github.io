@@ -58,8 +58,11 @@
 
         <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
       </div>
-
+      <blockquote class="text-warning text-center h3">
+       Details of each project in the portfolio section will be added soon. <p id="demo"></p>
+      </blockquote>
     </div>
+ 
   </header><!-- End Header -->
 
   <!-- ======= About Section ======= -->
@@ -733,7 +736,7 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/web/nsricvisa.png" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/web/nyttibd.png" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>NYTTI BD (Institute)</h4>
               <p>Web Development</p>
@@ -1016,7 +1019,36 @@
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
     Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
   </div>
-
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Feb 15, 2024 15:37:25").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
